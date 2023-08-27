@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Oldenburg&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color-bg-andro: #F7E4DF;
+    --color-bg-dekstop: #9ddfd5;
+    --color-merah: #F14947;
+    --color-biru: #446DB7;
+    --color-kuning: #F9B53F;
+    --color-hijau: #3BA27A;
+    --color-text-biru: #103362;
+    --color-text-hitam: #000000;
+}
+
+body {
+    overflow: hidden;
+    background-color: var(--color-bg-dekstop);
+}
+
+
+#button {
+    position: absolute;
+    transform: translateX(-10px);
+    top: 45vh;
+    color: white;
+}
+
+.container {
+    position: relative;
+}
+
+.hey {
+    color: #000;
+    font-family: Nunito;
+    font-size: 27.2px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.7;
+}
+
+.name {
+    color: #000;
+    font-family: Nunito;
+    font-size: 43.347px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.birthday {
+    color: #103362;
+    font-family: Oldenburg;
+    font-size: 74.204px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.desc {
+    color: #103362;
+    font-family: Oldenburg;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.from {
+    color: #000;
+    font-family: Oldenburg;
+    font-size: 27.2px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.7;
+}
+
+.tirai {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.text .greet,
+.wish {
+    margin: 1rem 0 1rem 0;
+}
+
+.text .bf {
+    margin: 1rem;
+}
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+.greet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Halaman Pertama */
+
+.container-first {
+    position: relative;
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#frame {
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+}
+
+#artis {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: translate(-4px, -1px);
+}
+
+@media only screen and (max-width: 700px) {
+
+    body {
+        background-color: var(--color-bg-andro);
+    }
+
+    #artis {
+        width: 150px;
+        height: 150px;
+    }
+
+    #frame {
+        width: 299px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .hey {
+        font-size: 13.52px;
+    }
+
+    .name {
+        font-size: 21.547px;
+    }
+
+    .birthday {
+        font-size: 37.204px;
+    }
+
+    .desc {
+        font-size: 18px;
+    }
+
+    .from {
+        font-size: 13.52px;
+    }
+
+    .tirai img {
+        max-width: 40%;
+        height: auto;
+    }
+
+    .bottom img {
+        max-width: 20%;
+        height: auto;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        top: 0;
+    }
+
+    .text .bf {
+        margin: 0;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    body {
+        background-color: var(--color-bg-dekstop);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .text {
+        position: absolute;
+        transform: translateY(-4rem);
+    }
+
+    .text .bf {
+        margin-top: 2rem;
+    }
+}

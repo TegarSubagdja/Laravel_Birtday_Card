@@ -1,0 +1,117 @@
+.inKiri {
+    animation: inKiri 1s ease-out;
+}
+
+.inKanan {
+    animation: inKanan 1s ease-out;
+}
+
+.text {
+    animation: zoom 1s ease-out;
+}
+
+#inBawah {
+    animation: inBawah 1s ease-out;
+}
+
+#frame {
+    animation: putarFrame 100s linear infinite;
+}
+
+.hold {
+    animation-duration: 1.2s;
+}
+
+#letter {
+    animation: notif 3s ease-out infinite;
+}
+
+.modal-part {
+    animation: kedip 1s ease-out infinite;
+}
+
+@keyframes kedip {
+    0% {
+        background-color: #F9B53F;
+    }
+
+    50% {
+        background-color: #a79578;
+    }
+
+    100% {
+        background-color: #F9B53F;
+    }
+}
+
+@keyframes notif {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes hide {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes zoom {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes inBawah {
+    0% {
+        transform: translateY(20rem);
+    }
+}
+
+@keyframes inKanan {
+    0% {
+        transform: translateX(20rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes inKiri {
+    0% {
+        transform: translateX(-20rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes putarFrame {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
