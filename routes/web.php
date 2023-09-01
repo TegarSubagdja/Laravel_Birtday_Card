@@ -16,7 +16,7 @@ use App\Http\Controllers\VeniController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 Route::get('/mau/{id}', [VeniController::class, 'mau'])->name('mau');
 
@@ -25,6 +25,8 @@ Route::get('/ga/{id}', [VeniController::class, 'ga'])->name('ga');
 Route::get('/input/{id}', [VeniController::class, 'input'])->name('input');
 
 Route::get('/thank', [VeniController::class, 'thank'])->name('thank');
+
+Route::get('/noThank', [VeniController::class, 'noThank'])->name('noThank');
 
 Route::get('/home', function () {
     return view('home');

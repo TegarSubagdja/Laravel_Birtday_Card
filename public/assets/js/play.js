@@ -1,11 +1,13 @@
 const button = document.getElementById('button');
 
-button.addEventListener('click', () => {
-    var audio = new Audio("assets/musik/musik.mp3");
-    audio.oncanplaythrough = function () {
-        audio.play();
-    }
-    audio.onended = function () {
-        audio.play();
+document.addEventListener('keydown', function (Event) {
+    if (Event.keyCode == 83) {
+        alert('Makasih sayang!');
     }
 })
+
+button.addEventListener('click', () => {
+    var audio = document.getElementById("myaudio");
+    audio.currentTime = 22;
+    audio.play();
+});

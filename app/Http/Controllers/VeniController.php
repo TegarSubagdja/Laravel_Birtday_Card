@@ -7,9 +7,14 @@ use App\Http\Controllers\Controller;
 
 class VeniController extends Controller
 {
+    public function reset()
+    {
+        DB::update('update terimakasih set value = null where id = 1');
+    }
+
     public function mau($id)
     {
-        dd($id); // Cetak nilai variabel $id ke konsol
+        dd($id);
         return view('index', compact('id'));
     }
 
@@ -17,16 +22,6 @@ class VeniController extends Controller
     {
         dd($id);
         return view('index', compact('id'));
-    }
-
-    public function input($id)
-    {
-        try {
-            $hasil = DB::insert('INSERT into perasaan (value) values (?)', [$id]);
-            return view('index', compact('hasil'));
-        } catch (\Exception $e) {
-            return "Terjadi kesalahan: " . $e->getMessage();
-        }
     }
 
     public function thank()
@@ -43,5 +38,11 @@ class VeniController extends Controller
         } catch (\Exception $e) {
             return "Terjadi kesalahan: " . $e->getMessage();
         }
+    }
+
+    public function noThank()
+    {
+        DB::update('UPDATE terimakasih set value = "your not that important" where id = 1');
+        return view('home');
     }
 }

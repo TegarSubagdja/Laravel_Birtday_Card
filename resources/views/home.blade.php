@@ -56,10 +56,19 @@
             </div>
             <div class="modal-footer">
                 <a type="button" href="{{ route('thank') }}" class="btn btn-warning">Thanks Tegarr</a>
-                <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                <a type="button" href="{{ route('noThank') }}" class="btn btn-default">Close</a>
+                <a type="button" href="{{ route('mau', ['id' => 10]) }}" class="btn btn-default">Mau</a>
             </div>
         </div>
     </div>
+</div>
+
+{{-- Bagian Musik --}}
+<div id="musik">
+    <audio id="myaudio" controls>
+        <source src="https://gitgars.000webhostapp.com/Hide/assets/musik/musik.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
 </div>
 <script src="{{ asset('assets/js/play.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
